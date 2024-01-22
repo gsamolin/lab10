@@ -1,0 +1,180 @@
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2024-01-20 05:45:28.778473"], ["updated_at", "2024-01-20 05:45:28.778473"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/calc/show?power=3&commit=%D0%9D%D0%B0%D0%B9%D1%82%D0%B8" for 127.0.0.1 at 2024-01-20 08:45:44 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/calc/show"):
+  
+Started GET "/calc/show?power=3&commit=%D0%9D%D0%B0%D0%B9%D1%82%D0%B8" for 127.0.0.1 at 2024-01-20 08:45:51 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/calc/show"):
+  
+Started GET "/proxy/view.x?power=4&route=server&commit=%D0%9D%D0%B0%D0%B9%D1%82%D0%B8" for ::1 at 2024-01-20 09:41:25 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/proxy/view.x"):
+  
+Started GET "/" for ::1 at 2024-01-20 09:41:29 +0300
+Processing by CalcController#calc as HTML
+Completed 406 Not Acceptable in 7ms (ActiveRecord: 0.0ms | Allocations: 2269)
+
+
+  
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  
+app/controllers/calc_controller.rb:18:in `calc'
+Started GET "/" for ::1 at 2024-01-20 09:41:38 +0300
+Processing by CalcController#calc as HTML
+Completed 406 Not Acceptable in 2ms (ActiveRecord: 0.0ms | Allocations: 505)
+
+
+  
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  
+app/controllers/calc_controller.rb:18:in `calc'
+Started GET "/?format=xml&power=4" for ::1 at 2024-01-20 10:24:02 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CalcController#calc as XML
+  Parameters: {"power"=>"4"}
+Completed 200 OK in 25ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 14669)
+
+
+Started GET "/?format=xml&power=4" for ::1 at 2024-01-20 10:24:11 +0300
+Processing by CalcController#calc as XML
+  Parameters: {"power"=>"4"}
+Completed 200 OK in 15ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 9772)
+
+
+Started GET "/?format=xml&power=4" for ::1 at 2024-01-20 11:28:03 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CalcController#calc as XML
+  Parameters: {"power"=>"4"}
+Completed 200 OK in 16ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 12463)
+
+
+Started GET "/?format=xml&power=3" for ::1 at 2024-01-20 11:29:20 +0300
+Processing by CalcController#calc as XML
+  Parameters: {"power"=>"3"}
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1823)
+
+
+Started GET "/?format=xml&power=2" for ::1 at 2024-01-20 11:30:12 +0300
+Processing by CalcController#calc as XML
+  Parameters: {"power"=>"2"}
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 358)
+
+
+Started GET "/?format=xml&power=3" for ::1 at 2024-01-20 11:30:18 +0300
+Processing by CalcController#calc as XML
+  Parameters: {"power"=>"3"}
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1747)
+
+
+Started GET "/?format=xml&power=3" for ::1 at 2024-01-20 11:30:30 +0300
+Processing by CalcController#calc as XML
+  Parameters: {"power"=>"3"}
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1743)
+
+
+Started GET "/?format=xml&power=4" for ::1 at 2024-01-20 11:31:18 +0300
+Processing by CalcController#calc as XML
+  Parameters: {"power"=>"4"}
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 9692)
+
+
+Started GET "/?format=xml&power=3" for ::1 at 2024-01-20 11:39:37 +0300
+Processing by CalcController#calc as XML
+  Parameters: {"power"=>"3"}
+Completed 200 OK in 3ms (Views: 0.1ms | Allocations: 1744)
+
+
+Started GET "/?format=xml&power=3" for ::1 at 2024-01-20 11:39:43 +0300
+Processing by CalcController#calc as XML
+  Parameters: {"power"=>"3"}
+Completed 200 OK in 3ms (Views: 0.1ms | Allocations: 1740)
+
+
+Started GET "/?format=xml&power=4" for ::1 at 2024-01-20 11:39:56 +0300
+Processing by CalcController#calc as XML
+  Parameters: {"power"=>"4"}
+Completed 200 OK in 14ms (Views: 0.1ms | Allocations: 9689)
+
+
+Started GET "/?format=xml&power=5" for ::1 at 2024-01-20 11:40:21 +0300
+Processing by CalcController#calc as XML
+  Parameters: {"power"=>"5"}
+Completed 200 OK in 140ms (Views: 0.1ms | Allocations: 90694)
+
+
+Started GET "/?format=xml&power=5" for ::1 at 2024-01-20 11:41:34 +0300
+Processing by CalcController#calc as XML
+  Parameters: {"power"=>"5"}
+Completed 200 OK in 104ms (Views: 0.0ms | Allocations: 90694)
+
+
+Started GET "/?format=xml&power=5" for ::1 at 2024-01-20 11:41:45 +0300
+Processing by CalcController#calc as XML
+  Parameters: {"power"=>"5"}
+Completed 200 OK in 104ms (Views: 0.0ms | Allocations: 90692)
+
+
+Started GET "/?format=xml&power=1" for ::1 at 2024-01-20 11:42:04 +0300
+Processing by CalcController#calc as XML
+  Parameters: {"power"=>"1"}
+Completed 200 OK in 3ms (Views: 0.1ms | Allocations: 1604)
+
+
+Started GET "/?format=xml&power=3" for ::1 at 2024-01-20 11:42:11 +0300
+Processing by CalcController#calc as XML
+  Parameters: {"power"=>"3"}
+Completed 200 OK in 2ms (Views: 0.1ms | Allocations: 1740)
+
+
+Started GET "/?format=xml&power=6" for ::1 at 2024-01-20 11:42:20 +0300
+Processing by CalcController#calc as XML
+  Parameters: {"power"=>"6"}
+Completed 200 OK in 1281ms (Views: 0.1ms | Allocations: 900397)
+
+
+Started GET "/?format=xml&power=5" for ::1 at 2024-01-20 11:42:26 +0300
+Processing by CalcController#calc as XML
+  Parameters: {"power"=>"5"}
+Completed 200 OK in 188ms (Views: 0.0ms | Allocations: 90694)
+
+
+Started GET "/?format=xml&power=4" for ::1 at 2024-01-20 11:42:57 +0300
+Processing by CalcController#calc as XML
+  Parameters: {"power"=>"4"}
+Completed 200 OK in 11ms (Views: 0.0ms | Allocations: 9689)
+
+
+Started GET "/?format=xml&power=4" for ::1 at 2024-01-20 11:50:31 +0300
+Processing by CalcController#calc as XML
+  Parameters: {"power"=>"4"}
+Completed 200 OK in 14ms (Views: 0.2ms | Allocations: 9689)
+
+
+Started GET "/?format=xml&power=4" for ::1 at 2024-01-22 17:23:53 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CalcController#calc as XML
+  Parameters: {"power"=>"4"}
+Completed 200 OK in 56ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 12463)
+
+
+Started GET "/?format=xml&power=1" for ::1 at 2024-01-22 17:38:38 +0300
+Processing by CalcController#calc as XML
+  Parameters: {"power"=>"1"}
+Completed 200 OK in 2ms (Views: 0.2ms | Allocations: 1681)
+
+
+Started GET "/?format=xml&power=1" for ::1 at 2024-01-22 17:38:57 +0300
+Processing by CalcController#calc as XML
+  Parameters: {"power"=>"1"}
+Completed 200 OK in 3ms (Views: 0.2ms | Allocations: 1608)
+
+
